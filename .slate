@@ -1,0 +1,41 @@
+config defaultToCurrentScreen true
+
+# Abstract positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias left-half move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias left-third move screenOriginX;screenOriginY screenSizeX/3;screenSizeY
+alias left-two-third move screenOriginX;screenOriginY 2*screenSizeX/3;screenSizeY
+alias right-half move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias right-third move screenOriginX+2*screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY
+alias right-two-third move screenOriginX+screenSizeX/3;screenOriginY 2*screenSizeX/3;screenSizeY
+alias top-half move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottom-half move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+alias center move screenOriginX+screenSizeX/6;screenOriginY+screenSizeY/6 2*screenSizeX/3;2*screenSizeY/3
+alias bigCenter move screenOriginX+screenSizeX/12;screenOriginY+screenSizeY/12 10*screenSizeX/12;10*screenSizeY/12
+
+# The bind keys
+alias triple ctrl;alt;cmd
+alias double ctrl;cmd
+
+# Bind commands for opening specific programs
+bind c:${triple} focus 'Google Chrome'
+bind t:${triple} focus 'Terminal'
+bind p:${triple} focus 'Postman'
+
+# Location bindings
+bind left:${triple} chain ${left-half} | ${left-third} | ${left-two-third}
+bind right:${triple} chain ${right-half} | ${right-third} | ${right-two-third}
+bind return:${triple} chain ${full} | undo
+bind up:${triple} ${top-half}
+bind down:${triple} ${bottom-half}
+bind c:${triple} ${center}
+bind v:${triple} ${bigCenter}
+bind down:${double} sequence focus right > ${left-half} | ${right-half}
+bind right:${double} sequence focus right > ${left-two-third} | ${right-third}
+bind left:${double} sequence focus right > ${left-third} | ${right-two-third}
+bind up:${double} focus left
+bind return:${double} chain ${topleft} | ${topright} | ${bottomright} | ${bottomleft}
