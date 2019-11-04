@@ -5,10 +5,18 @@ Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 " Colorschemes
 Plug 'ayu-theme/ayu-vim'
+" Fuzzy file search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+" Multiple select
+Plug 'terryma/vim-multiple-cursors'
+" File tree     
 Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " All plugins must be added before this line!
+" When you have a new plugin to install, source the .vimrc file again
+" Then :PlugInstall to install plugins.
 
 " Syntax
 syntax on
