@@ -1,2 +1,3 @@
-To use this repo:
- - link actual setup files to these ones using ln -s ~/dev-setup/.vim ~/.vim etc
+To use this repo, clone it then link the files here to the local ones on your machine using:
+ln -s ~/dev-setup/.slate ~/.slate
+ln -s ~/dev-setup/.vimrc ~/.vimrc

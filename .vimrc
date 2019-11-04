@@ -24,3 +24,6 @@ set noshowmode
 let g:lightline = {
   \'colorscheme':'wombat',
   \}
+
+" Backspace normal functionality
+set backspace=indent,eol,start
