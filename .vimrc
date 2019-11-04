@@ -5,13 +5,14 @@ Plug 'itchyny/lightline.vim'
 Plug 'leafgarland/typescript-vim'
 " Colorschemes
 Plug 'ayu-theme/ayu-vim'
+Plug 'drewtempelmeyer/palenight.vim'
 " Fuzzy file search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Multiple select
 Plug 'terryma/vim-multiple-cursors'
 " File tree     
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
 " All plugins must be added before this line!
@@ -35,3 +36,7 @@ let g:lightline = {
 
 " Backspace normal functionality
 set backspace=indent,eol,start
+
+" HotKeys
+map <C-o> :NERDTreeToggle<CR>
+
