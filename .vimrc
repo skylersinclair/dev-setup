@@ -40,3 +40,5 @@ set backspace=indent,eol,start
 " HotKeys
 map <C-o> :NERDTreeToggle<CR>
 
+" Show line numbers
+set number

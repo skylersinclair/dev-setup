@@ -25,6 +25,7 @@ alias double ctrl;cmd
 bind c:${triple} focus 'Google Chrome'
 bind t:${triple} focus 'Terminal'
 bind p:${triple} focus 'Postman'
+bind y:${triple} focus 'PyCharm'
 
 # Location bindings
 bind left:${triple} chain ${left-half} | ${left-third} | ${left-two-third}
