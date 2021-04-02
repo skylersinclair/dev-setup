@@ -42,3 +42,8 @@ map <C-o> :NERDTreeToggle<CR>
 
 " Show line numbers
 set number
+
+" Commenting with #
+vnoremap <silent> # :s/^/#/<cr>:noh<cr>
+vnoremap <silent> -# :s/^#//<cr>:noh<cr>
+
