@@ -23,5 +23,7 @@ You can install tmux via `brew install tmux`. Then make a new session via `tmux 
 ## Slate
 If you upgrade your mac os and slate stops working, you can debug by manually removing then adding slate to the security and privacy > privacy > accessibility settings as described [here](https://github.com/jigish/slate/issues/405).
 
+NOTE: Slate behaves badly (at least for me) when I'm running phone emulators on android studio. Once I've quit android studio, it goes back to acting normally.
+
 ## Bash
 Why don't I have a .bashrc here? Gotta add that... :p
