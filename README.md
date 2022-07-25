@@ -25,5 +25,16 @@ If you upgrade your mac os and slate stops working, you can debug by manually re
 
 NOTE: Slate behaves badly (at least for me) when I'm running phone emulators on android studio. Once I've quit android studio, it goes back to acting normally.
 
+## Github Actions
+[Github actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) are workflows that spin up on a github server when triggered by an action (pushing a branch, creating a PR, etc). In June 2022, free github accounts get [2000 minutes of server time a month](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
+
+This is a workflow that runs two separate jobs, one for linting and one for running all tests via pytest. While individual repos have more specific needs, this is an excellent go to for starters.
+
+## Git Pre Commit Hooks
+[Pre commit hooks](https://pre-commit.com/#pre-commit-configyaml---hooks) are checks that are run automatically before you commit changes to your git branch, used to maintain code quality and style. The pre commit hooks are set up in `.pre-commit-config.yaml`. Post installing and running pre commit hooks, remember to run `pre-commit autoupdate` every once and a while to update the versions of the repos you're drawing from (flake8, black, etc).
+
+I personally like running [black](https://github.com/psf/black) with their built in 88 character line length cutoff to format my code and [flake8](https://flake8.pycqa.org/en/latest/) to lint during my pre commit hook steps to keep me accountable.
+
+
 ## Bash
 Why don't I have a .bashrc here? Gotta add that... :p
