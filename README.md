@@ -1,7 +1,6 @@
 ## Symlinks
 To use this repo, clone it then link the files here to the local ones on your machine using:
 
- - `ln -s ~/SOME/DIR/dev-setup/.slate ~/.slate` [NOTE: NO LONGER RECOMMENDING SLATE USAGE]
  - `ln -s ~/SOME/DIR/dev-setup/.vimrc ~/.vimrc`
  - `ln -s ~/SOME/DIR/dev-setup/.tmux.conf ~/.tmux.conf`
  
@@ -14,13 +13,15 @@ The first time you use it you have to install it, aka
 
 `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+
+NOTE: DO NOT use the neovim curl if you don't use neovim! You will likely get a "PlugInstall is not a valid command" error if you've done this, go back to the [installation instructions](https://github.com/junegunn/vim-plug?tab=readme-ov-file#installation)) part of the README and grab the right install.
     
-after it's installed, open any document using vim and type `:PlugInstall`
+after it's installed, open any document using vim and type `:PlugInstall`. The plugins will auto install, and then if you reopen a file in vim you should be good to go.
 
 ## Tmux
 You can install tmux via `brew install tmux`. Then make a new session via `tmux new -s session_name`. Reattach later via `tmux a -t session_name`.
 
-## Windows Management (Slate or Rectangle)
+## Windows Management (Rectangle, previously Slate)
 I used to use Slate, but it's way too old and pretty much unsupported now. I now use [Rectangle](https://rectangleapp.com/), pretty much straight out of the box. No config file necessary.
 
 For those of you still using slate:
