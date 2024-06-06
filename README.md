@@ -1,7 +1,7 @@
 ## Symlinks
 To use this repo, clone it then link the files here to the local ones on your machine using:
 
- - `ln -s ~/SOME/DIR/dev-setup/.slate ~/.slate`
+ - `ln -s ~/SOME/DIR/dev-setup/.slate ~/.slate` [NOTE: NO LONGER RECOMMENDING SLATE USAGE]
  - `ln -s ~/SOME/DIR/dev-setup/.vimrc ~/.vimrc`
  - `ln -s ~/SOME/DIR/dev-setup/.tmux.conf ~/.tmux.conf`
  
@@ -20,7 +20,11 @@ after it's installed, open any document using vim and type `:PlugInstall`
 ## Tmux
 You can install tmux via `brew install tmux`. Then make a new session via `tmux new -s session_name`. Reattach later via `tmux a -t session_name`.
 
-## Slate
+## Windows Management (Slate or Rectangle)
+I used to use Slate, but it's way too old and pretty much unsupported now. I now use [Rectangle](https://rectangleapp.com/), pretty much straight out of the box. No config file necessary.
+
+For those of you still using slate:
+
 If you upgrade your mac os and slate stops working, you can debug by manually removing then adding slate to the security and privacy > privacy > accessibility settings as described [here](https://github.com/jigish/slate/issues/405).
 
 NOTE: Slate behaves badly (at least for me) when I'm running phone emulators on android studio. Once I've quit android studio, it goes back to acting normally.
